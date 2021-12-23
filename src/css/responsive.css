@@ -1,0 +1,90 @@
+@media screen and (min-width: 768px) {
+    .networks-container {max-width: 220rem;margin: auto;overflow: hidden;z-index: 0;}
+    .networks-logo {    animation: marquee 35s linear infinite;grid-template-columns: repeat(7, 17.7rem);column-gap: 1.5rem;animation-direction: alternate;}
+}
+
+@media screen and (max-width: 960px) {
+    .learn-anything,.discover-export,.testimonial-slider,.solve-content,.ask-question,#header .header-area {padding: 0 20px;margin-left: auto;margin-right: auto;width: 100%;}
+    .discover-title,.discover-tab .nav-tabs {display: none;}
+}
+
+@media screen and (max-width: 900px) {
+    .main-header-area .logo {transition: all 0.8s ease 0s;transform: translateX(-35px);}
+    .discover-title-mb {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .discover-title-mb h2 {
+        color: rgb(255, 255, 255);
+        font-size: 2.3rem;
+        border-right: none;
+        padding: 1rem;
+    }
+    .discover-title-mb h3 {
+        color: grey;
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding: 1rem;
+    }
+    .solve-content .learn-title,.main-title {width: 100%;font-size: 2.5rem;}
+    .fullsize-video-bg .sub-title {font-size: 1.8rem;line-height: 1;}
+    .learn-title {font-size: 2.3rem;}
+    .solvepro-content {padding: 30px 20px;}
+    .solve-title-number .display-4 {font-size: 50px !important;}
+    .solve-text {margin-top: 10px;margin-bottom: 10px;}
+    .learn-contant-main .learn-content div.para-div {width: 80%;margin-right: auto;}
+    .footer-content {padding: 0;}
+    .footer-bottom {padding: 0;margin-bottom: 2rem;}
+    .learn-btn {margin-bottom: 20px;}
+}
+@media screen and (max-width: 768px) {
+    .main-header-area .left-side {display: none;}
+    .main-header-area .right-side {display: none;}
+    .learn-title {font-size: 2rem;}
+    .solvepro-content {margin-bottom: 15px;}
+    .influencers-text {margin-top: -2rem;}
+    .client-testimonial-carousel .slick-prev {right: 56%;}
+    .client-testimonial-carousel .slick-next {left: 56%;}
+    .footer-content {padding: 0 20px;}
+    .footer-bottom {padding: 0 20px;margin-bottom: 2rem;}
+}
+@media screen and (max-width: 574px) {
+    .footer-left-content {margin-top: 10px;}
+    .footer-right-content {margin-top: 10px;justify-content: flex-start;align-items: flex-start;}
+    .footer-title {margin-bottom: 10px;}
+    .solve-content .learn-title, .main-title,.learn-title,.discover-title-mb h2 {font-size: 2rem;}
+
+}
+
+@media screen and (max-width: 551px) {
+    .client-testimonial-carousel .slick-next {left: auto;right: 0;}
+    .client-testimonial-carousel .slick-prev {left: 0;right: auto;}
+    .ask-question .accordion {padding: 0;}
+}
+
+@media screen and (max-width: 480px) {
+    .ask-question .card-header h2 .btn,.ask-question .card-body {font-size: 12px;}
+    .footer-bottom {flex-direction: column;}
+    .solve-content .learn-title, .main-title,.learn-title,.discover-title-mb h2,.member-title {font-size: 1.5rem;}
+    .fullsize-video-bg .sub-title {font-size: 1rem;line-height: 1;margin-top: 10px;}
+    .main-title {line-height: 1;}
+    .solve-title-number .display-4 {font-size: 40px;}
+    .footer-title {font-size: 18px;}
+    .footer-right-content .nav-link svg,.footer-right-content .nav-link.icon {width: 25px;height: 25px;}
+    .ask-question .hero-banner__content {font-size: 16px;}
+    .menu-side-mb {grid-template-rows: repeat(6, 60px);}
+
+}
+@media screen and (max-width: 350px) {
+    .ask-question .card-header h2 .btn,.ask-question .card-body {font-size: 10px;}
+    .learn-anything, .discover-export, .testimonial-slider, .solve-content, .ask-question {padding: 0 10px;}
+    .influencers-text p {font-size: 12px;}
+    .single-testimonial-item {font-size: 14px;}
+    .footer-year {font-size: 14px;margin-top: 7px;}
+    .footer-logo img,.main-header-area .logo img {width: 150px !important;}
+}
