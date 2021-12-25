@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
   const [mobile, setMobile] = useState(false)
+   
+    let location = window.location.pathname
+     
+     const [offset, setOffset] = useState(0);
+   
+     useEffect(() => {
+       window.onscroll = () => {
+         setOffset(window.pageYOffset)
+       }
+     }, []);
+   
+     useEffect(() => {
+       let header = document.getElementsByClassName("fixed-top");  
+         if (offset > 20) {
+           header[0].classList.add("header-fixed");
+           
+         } else {
+           header[0].classList.remove("header-fixed");
+           
+         }
+     
+     }, [offset]);
   return (
     <React.Fragment>
       <header id="header" className="fixed-top">
         <div className="header-area d-none d-lg-block">
             <div className="main-header-area">
-                <div className="container-fluid d-flex align-items-center">
+                <div className="container d-flex align-items-center">
                     <div className="left-side">
                         <div className="browse-content">
                             <button type="button" className="btn btn-search btn-gradient btn-login">Browse</button>
@@ -28,7 +50,7 @@ function Header(props) {
 
                     <div className="right-side">
                         <div className="user-add">
-                            <a href="javascript:;" className="btn btn-search btn-login">Log In</a>
+                            <a href="javascript:;" className="btn btn-search btn-login">LogIn</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +70,7 @@ function Header(props) {
                             </ul>
                             <div className="right-side">
                                 <div className="user-add">
-                                    <a href="javascript:;" className="btn btn-search btn-login">Log In</a>
+                                    <a href="javascript:;" className="btn btn-search btn-login">LogIn</a>
                                 </div>
                             </div>
                         </nav>

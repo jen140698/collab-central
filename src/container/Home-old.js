@@ -31,7 +31,7 @@ function Home(props) {
         </div>
 
         <section className="marquee-content">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="slick marquee">
                     <div className="slick-slide">
                       <div className="inner">
@@ -78,25 +78,25 @@ function Home(props) {
         </section>
 
         <section className="solve-content">
-            <div className="container">
+            <div className="container-lg">
                 <h2 className="learn-title">
                     The way we work is to define your promble, <span className="gradient-text">and find the best</span> way to
                     solve the promble.
                 </h2>
                 <div className="row mt-5 justify-content-center">
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div className="col-lg-3 col-md-4 col-sm-4 col-12">
                         <div className="solvepro-content">
                             <div className="solve-title-number"><span id="count1" className="display-4"></span></div>
                             <div className="solve-text">Influencers</div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div className="col-lg-3 col-md-4 col-sm-4 col-12">
                         <div className="solvepro-content">
                             <div className="solve-title-number"><span id="count2" className="display-4"></span></div>
                             <div className="solve-text">Categories</div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div className="col-lg-3 col-md-4 col-sm-4 col-12">
                         <div className="solvepro-content">
                             <div className="solve-title-number"><span id="count3" className="display-4"></span></div>
                             <div className="solve-text">Class Hours</div>
@@ -107,10 +107,10 @@ function Home(props) {
         </section>
 
         <section className="learn-anything pt-5">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12 learn-content">
-                        <h1 className="learn-title">Learn Anything <br/> Anywhere, at Your Own Pace</h1>
+                        <h1 className="learn-title">Learn Anything Anywhere, at Your Own Pace</h1>
                         <div className="learn-para">
                             <ul className="learn-para-list">
                                 <li className="learn-para-item">
@@ -140,7 +140,7 @@ function Home(props) {
         </section>
 
         <section className="discover-export">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="discover-title-mb">
                     <h2>Discover Experts</h2>
                     <h3>Explore All</h3>
@@ -184,12 +184,12 @@ function Home(props) {
         </section>
         </div>
         <section className="learn-anything">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row learn-contant-main">
                     <div className="learn-content-bg">
                         <div className="learn-content">
                             <div className="para-div">
-                                <h1 className="learn-title">Learn Anything <br/> Anywhere, at Your Own Pace</h1>
+                                <h1 className="learn-title">Learn Anything Anywhere, at Your Own Pace</h1>
                                 <div className="learn-para">
                                     <ul className="learn-para-list">
                                         <li className="learn-para-item">
@@ -214,7 +214,7 @@ function Home(props) {
         </section>
         <div className='expert-border'>
         <section className="discover-export">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="discover-title-mb">
                     <h2>Discover Experts</h2>
                     <h3>Explore All</h3>
@@ -351,7 +351,7 @@ function Home(props) {
         </section>
 
         <section className="learn-anything">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row learn-contant-main">
                     <div className="learn-content-bg">
                         <div className="learn-content">
@@ -372,7 +372,7 @@ function Home(props) {
         </section>
 
         <section className="testimonial-slider">
-            <div className="container">
+            <div className="container-fluid">
                 <h2 className="member-title text-center">See What Our <br /> members are saying.</h2>
                 <div className="member-slider client-testimonial-carousel mt-4">
                     <div className="single-testimonial-item">
@@ -430,7 +430,7 @@ function Home(props) {
         </section>
         </div>
         <section className="ask-question">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="frequently-asked">
                     <div className="hero-banner__content">
                         <div className="corner-borders corner-borders-left"></div>

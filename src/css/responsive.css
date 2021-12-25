@@ -1,6 +1,27 @@
+@media screen and (min-width: 1800px) {
+    .solve-content .col-lg-3 {-ms-flex: 0 0 20%;flex: 0 0 20%;max-width: 20%;}
+    .solve-content .learn-title {width: 90%;}
+    .header-border::before,.header-border::after {height: 90.9%;}
+}
+@media screen and (max-width: 1799px) {
+    .header-border::before,.header-border::after {height: 90.7%;}
+}
+@media screen and (max-height: 776px) {
+    .header-border::before,.header-border::after {height: 89.5%;}
+}
+/* @media screen and (max-width: 1600px) {
+    .header-border::before,.header-border::after {height: 90.7%;}
+} */
+
+@media screen and (max-width: 1367px) {
+    .header-border::before,.header-border::after {height: 90.5%;}
+}
 @media screen and (min-width: 768px) {
     .networks-container {max-width: 220rem;margin: auto;overflow: hidden;z-index: 0;}
     .networks-logo {    animation: marquee 35s linear infinite;grid-template-columns: repeat(7, 17.7rem);column-gap: 1.5rem;animation-direction: alternate;}
+}
+@media screen and (min-width: 576px) {
+    /* .footer .container {max-width: 720px;} */
 }
 
 @media screen and (max-width: 960px) {
@@ -41,6 +62,9 @@
     .footer-content {padding: 0;}
     .footer-bottom {padding: 0;margin-bottom: 2rem;}
     .learn-btn {margin-bottom: 20px;}
+    .discover-export .slick-next {right: -25px;}
+    .discover-export .slick-prev {left: -25px;}
+    .expert-border::after,.expert-border::before,.header-border::before,.header-border::after {display: none;}
 }
 @media screen and (max-width: 768px) {
     .main-header-area .left-side {display: none;}
@@ -52,6 +76,13 @@
     .client-testimonial-carousel .slick-next {left: 56%;}
     .footer-content {padding: 0 20px;}
     .footer-bottom {padding: 0 20px;margin-bottom: 2rem;}
+}
+@media screen and (max-width: 767px) {
+    .footer-logo {display: flex;justify-content: center;align-items: center;}
+    .footer-year {text-align: center;margin-top: 10px;}
+    .footer .container {max-width: 720px;}
+    .footer-left-content,.footer-right-content {margin-top: 15px;}
+
 }
 @media screen and (max-width: 574px) {
     .footer-left-content {margin-top: 10px;}
