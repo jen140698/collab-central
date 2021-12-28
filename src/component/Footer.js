@@ -7,7 +7,8 @@ function Footer(props) {
 
     return (
         <React.Fragment>
-            <footer className="footer">
+            <footer className="footer footer-bg">
+            {/* <div className='footer-bg'><img src={require("../images/footer.png")} className='img-fluid' /></div> */}
                 <div className="container">
                     <div className="row footer-content">
                         <div className="col-md-4 col-sm-12 col-12">

@@ -35,16 +35,6 @@ function Home(props) {
                 <div className="slick marquee">
                     <div className="slick-slide">
                       <div className="inner">
-                        <img src={require("../images/logo/ego.svg")} className="img-fluid" width="200px"/>
-                      </div>
-                    </div>
-                    <div className="slick-slide">
-                      <div className="inner">
-                        <img src={require("../images/logo/lifemath.svg")} className="img-fluid" width="200px"/>
-                      </div>
-                    </div>
-                    <div className="slick-slide">
-                      <div className="inner">
                         <img src={require("../images/logo/mask.svg")} className="img-fluid" width="200px"/>
                       </div>
                     </div>
@@ -55,15 +45,25 @@ function Home(props) {
                     </div>
                     <div className="slick-slide">
                       <div className="inner">
-                        <img src={require("../images/logo/pickup.svg")} className="img-fluid" width="200px"/>
+                        <img src={require("../images/logo/pickup.svg")} className="img-fluid" width="150px"/>
                       </div>
                     </div>
                     <div className="slick-slide">
                       <div className="inner">
-                        <img src={require("../images/logo/dentes.svg")} className="img-fluid" width="200px"/>
+                        <img src={require("../images/logo/ego.svg")} className="img-fluid" width="150px"/>
                       </div>
                     </div>
+                    {/* <div className="slick-slide">
+                      <div className="inner">
+                        <img src={require("../images/logo/lifemath.svg")} className="img-fluid" width="200px"/>
+                      </div>
+                    </div> */}
                     <div className="slick-slide">
+                      <div className="inner">
+                        <img src={require("../images/logo/dentes.svg")} className="img-fluid" width="150px"/>
+                      </div>
+                    </div>
+                    {/* <div className="slick-slide">
                       <div className="inner">
                         <img src={require("../images/logo/womanese.svg")} className="img-fluid" width="200px"/>
                       </div>
@@ -72,7 +72,7 @@ function Home(props) {
                       <div className="inner">
                         <img src={require("../images/logo/pua.svg")} className="img-fluid" width="200px"/>
                       </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
@@ -83,34 +83,40 @@ function Home(props) {
                     The way we work is to define your promble, <span className="gradient-text">and find the best</span> way to
                     solve the promble.
                 </h2>
-                <div className="row mt-5 justify-content-center">
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                <div className="row justify-content-center">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-12 px-lg-0">
                         <div className="solvepro-content">
-                            <div className="solve-title-number"><span id="count1" className="display-4"></span></div>
-                            <div className="solve-text">Influencers</div>
+                            <div className='solvepro-hover'>
+                                <div className="solve-title-number"><span id="count1" className="display-4"></span></div>
+                                <div className="solve-text">Influencers</div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-12 px-lg-0">
                         <div className="solvepro-content">
-                            <div className="solve-title-number"><span id="count2" className="display-4"></span></div>
-                            <div className="solve-text">Categories</div>
+                            <div className='solvepro-hover'>
+                                <div className="solve-title-number"><span id="count2" className="display-4"></span></div>
+                                <div className="solve-text">Categories</div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-12 px-lg-0">
                         <div className="solvepro-content">
-                            <div className="solve-title-number"><span id="count3" className="display-4"></span></div>
-                            <div className="solve-text">Class Hours</div>
+                            <div className='solvepro-hover'>
+                                <div className="solve-title-number"><span id="count3" className="display-4"></span></div>
+                                <div className="solve-text">Class Hours</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section className="learn-anything pt-5">
+        <section className="learn-anything pt-lg-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-12 learn-content">
-                        <h1 className="learn-title">Learn Anything <br/> Anywhere, at Your Own Pace</h1>
+                    <div className="col-lg-6 col-md-12 col-sm-12 col-12 learn-content pl-lg-0">
+                        <h1 className="learn-title pb-3">Learn Anything Anywhere <br/> at Your Own Pace</h1>
                         <div className="learn-para">
                             <ul className="learn-para-list">
                                 <li className="learn-para-item">
@@ -189,7 +195,7 @@ function Home(props) {
                     <div className="learn-content-bg">
                         <div className="learn-content">
                             <div className="para-div">
-                                <h1 className="learn-title">Learn Anything <br/> Anywhere, at Your Own Pace</h1>
+                                <h1 className="learn-title">Learn Anything Anywhere <br/> at Your Own Pace</h1>
                                 <div className="learn-para">
                                     <ul className="learn-para-list">
                                         <li className="learn-para-item">
@@ -240,7 +246,16 @@ function Home(props) {
                     </ul>
                     <div className="tab-content mt-5">
                     <div className="slick-carousel slick-product">
-                            <div className="picha discover-img-slider slider-img1">
+                            <div className="picha discover-img-slider explore-img5"></div>
+                            <div className="picha discover-img-slider explore-img6"></div>
+                            <div className="picha discover-img-slider explore-img7"></div>
+                            <div className="picha discover-img-slider explore-img8"></div>
+                            <div className="picha discover-img-slider explore-img1"></div>
+                            <div className="picha discover-img-slider explore-img2"></div>
+                            <div className="picha discover-img-slider explore-img3"></div>
+                            <div className="picha discover-img-slider explore-img4"></div>
+                            <div className="picha discover-img-slider explore-img9"></div>
+                            {/* <div className="picha discover-img-slider slider-img1">
                                 <div className='picha-inner-content'>
                                     <div className='overly-picha-bg'></div>
                                     <div className='picha-content'>
@@ -291,59 +306,8 @@ function Home(props) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="picha discover-img-slider slider-img5">
-                                <div className='picha-inner-content'>
-                                    <div className='overly-picha-bg'></div>
-                                    <div className='picha-content'>
-                                        <div className='picha-logo'>
-                                            <img src={require("../images/logo/pathtomanliness.svg")} className="img-fluid" width="150px"/>
-                                        </div>
-                                        <div className='picha-text mt-3'>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="picha discover-img-slider slider-img6">
-                                <div className='picha-inner-content'>
-                                    <div className='overly-picha-bg'></div>
-                                    <div className='picha-content'>
-                                        <div className='picha-logo'>
-                                            <img src={require("../images/logo/pua.svg")} className="img-fluid" width="150px"/>
-                                        </div>
-                                        <div className='picha-text mt-3'>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="picha discover-img-slider slider-img7">
-                                <div className='picha-inner-content'>
-                                    <div className='overly-picha-bg'></div>
-                                    <div className='picha-content'>
-                                        <div className='picha-logo'>
-                                            <img src={require("../images/logo/womanese.svg")} className="img-fluid" width="150px"/>
-                                        </div>
-                                        <div className='picha-text mt-3'>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="picha discover-img-slider slider-img8">
-                                <div className='picha-inner-content'>
-                                    <div className='overly-picha-bg'></div>
-                                    <div className='picha-content'>
-                                        <div className='picha-logo'>
-                                            <img src={require("../images/logo/lifemath.svg")} className="img-fluid" width="150px"/>
-                                        </div>
-                                        <div className='picha-text mt-3'>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> */}
+                            
                         </div>
                     </div>
                 </div>
@@ -353,7 +317,7 @@ function Home(props) {
         <section className="learn-anything">
             <div className="container">
                 <div className="row learn-contant-main">
-                    <div className="learn-content-bg">
+                    <div className="learn-content-bg best-seller-bg">
                         <div className="learn-content">
                             <div className="para-div text-center mx-auto">
                                 <h1 className="learn-title text-center">Best Seller</h1>

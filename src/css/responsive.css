@@ -1,13 +1,12 @@
 @media screen and (min-width: 1800px) {
     .solve-content .col-lg-3 {-ms-flex: 0 0 20%;flex: 0 0 20%;max-width: 20%;}
-    .solve-content .learn-title {width: 90%;}
     .header-border::before,.header-border::after {height: 90.9%;}
 }
 @media screen and (max-width: 1799px) {
     .header-border::before,.header-border::after {height: 90.7%;}
 }
 @media screen and (max-height: 776px) {
-    .header-border::before,.header-border::after {height: 89.5%;}
+    .header-border::before,.header-border::after {height: 89.7%;}
 }
 /* @media screen and (max-width: 1600px) {
     .header-border::before,.header-border::after {height: 90.7%;}
@@ -55,7 +54,7 @@
     .solve-content .learn-title,.main-title {width: 100%;font-size: 2.5rem;}
     .fullsize-video-bg .sub-title {font-size: 1.8rem;line-height: 1;}
     .learn-title {font-size: 2.3rem;}
-    .solvepro-content {padding: 30px 20px;}
+    .solvepro-content {padding: 30px 20px;width: auto;height: auto;}
     .solve-title-number .display-4 {font-size: 50px !important;}
     .solve-text {margin-top: 10px;margin-bottom: 10px;}
     .learn-contant-main .learn-content div.para-div {width: 80%;margin-right: auto;}
@@ -76,6 +75,7 @@
     .client-testimonial-carousel .slick-next {left: 56%;}
     .footer-content {padding: 0 20px;}
     .footer-bottom {padding: 0 20px;margin-bottom: 2rem;}
+    .footer {background-position: right;}
 }
 @media screen and (max-width: 767px) {
     .footer-logo {display: flex;justify-content: center;align-items: center;}
