@@ -1,37 +1,109 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+// import Header from "../component/Header"
 import { Link } from 'react-router-dom';
 
 function Home(props) {
   const [mobile, setMobile] = useState(false)
+  const [hover,setHover]=useState(false)
+   let location = window.location.pathname
+    
+    const [offset, setOffset] = useState(0);
+
+    const handleHover = ()=>{
+         setHover(true)
+    }
+    const handleLeave = ()=>{
+         setHover(false)
+    }
+  
+    useEffect(() => {
+      window.onscroll = () => {
+        setOffset(window.pageYOffset)
+      }
+    }, []);
+  
+    useEffect(() => {
+      let header = document.getElementsByClassName("fixed-top");  
+        if (offset > 20) {
+          header[0].classList.add("header-fixed");
+          
+        } else {
+          header[0].classList.remove("header-fixed");
+          
+        }
+    
+    }, [offset]);
   return (
     <React.Fragment>
-        <div className='header-border'>
+        <header id="header" className="fixed-top">
+        <div className="header-area d-none d-lg-block">
+            <div className="main-header-area">
+                <div className="container d-flex align-items-center">
+                    <div className="left-side">
+                        <div className="browse-content">
+                            <button type="button" onMouseEnter={handleHover} onMouseLeave={handleLeave} className="btn btn-search"><span>Browse</span></button>
+                            <button type="button" onMouseEnter={handleHover} onMouseLeave={handleLeave} className="btn btn-search btn-search-hoverline"><span><i class="fa fa-search mr-2" aria-hidden="true"></i>Search</span></button>
+                        </div>
+                    </div>
+                    <div className="logo mx-lg-auto">
+                        <a href="index.html"><img src={require("../images/Collabs-Central-Logo.svg")} className="img-fluid lazyload" alt="Logo"
+                                width="289px" /></a>
+                    </div>
+
+                    <div className="right-side">
+                        <div className="user-add">
+                          <button type='button' onMouseEnter={handleHover} onMouseLeave={handleLeave} className="btn btn-search"><span>LogIn</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="header-area d-block d-lg-none">
+            <div className="main-header-area">
+                <div className="container d-flex align-items-center">
+                    <div className="logo mr-auto">
+                        <a href="index.html"><img src={require("../images/Collabs-Central-Logo.png")} className="img-fluid" alt="Logo" width="200px" /></a>
+                    </div>
+                    <div className="menu-side-mb">
+                        <nav className="nav-menu d-none d-lg-block">
+                            <ul>
+                                <li><a href="#" className="menu-url">Discover</a></li>
+                                <li><a href="#" className="menu-url">Products</a></li>
+                            </ul>
+                            <div className="right-side">
+                                <div className="user-add">
+                                    <a href="javascript:;" className="btn btn-search"><span>LogIn</span></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+        <div className={`header-border ${hover ?'border-hide':''}`}>
         <section className="fullsize-video-bg">
             <div className="video-content">
                 <div className="content-text">
                     <div className="main-title">Master New Skills Today</div>
                     <div className="auto-type-text">
-                        <div className="sub-title">Learn How to <span className="input"></span></div>
+                        <div className="sub-title"><span className="input"></span></div>
                     </div>
                 </div>
             </div>
             <div id="video-viewport">
-                <video width="1920" height="1280" autoPlay muted loop>
+                <video autoPlay muted loop>
                     <source src={require("../images/bg.mp4")} type="video/mp4" />
                 </video>
             </div>
         </section>
-    <div className='influncer-line'></div>
-        <div className="influencers-text-content influencers-text">
-            <div className="hero-banner__content">
-                <div className="corner-borders corner-borders-left"></div>
-                <div className="corner-borders corner-borders-right"></div>
+        <div className="influencers-text-content">
+            <div className="influencers-text">
                 <p>Taught By Your Favorite Influencers</p>
             </div>
         </div>
-
         <section className="marquee-content">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="slick marquee">
                     <div className="slick-slide">
                       <div className="inner">
@@ -53,17 +125,17 @@ function Home(props) {
                         <img src={require("../images/logo/ego.svg")} className="img-fluid" width="150px"/>
                       </div>
                     </div>
-                    {/* <div className="slick-slide">
+                    <div className="slick-slide">
                       <div className="inner">
                         <img src={require("../images/logo/lifemath.svg")} className="img-fluid" width="200px"/>
                       </div>
-                    </div> */}
+                    </div>
                     <div className="slick-slide">
                       <div className="inner">
-                        <img src={require("../images/logo/dentes.svg")} className="img-fluid" width="150px"/>
+                        <img src={require("../images/logo/dentes.svg")} className="img-fluid" width="200px"/>
                       </div>
                     </div>
-                    {/* <div className="slick-slide">
+                    <div className="slick-slide">
                       <div className="inner">
                         <img src={require("../images/logo/womanese.svg")} className="img-fluid" width="200px"/>
                       </div>
@@ -72,7 +144,7 @@ function Home(props) {
                       <div className="inner">
                         <img src={require("../images/logo/pua.svg")} className="img-fluid" width="200px"/>
                       </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,8 +152,8 @@ function Home(props) {
         <section className="solve-content">
             <div className="container">
                 <h2 className="learn-title">
-                    The way we work is to define your promble, <span className="gradient-text">and find the best</span> way to
-                    solve the promble.
+                    The way we work is to define your problem, <span className="gradient-text">and find the best</span> way to
+                    solve the problem.
                 </h2>
                 <div className="row justify-content-center">
                     <div className="col-lg-4 col-md-4 col-sm-4 col-12 px-lg-0">
@@ -112,26 +184,26 @@ function Home(props) {
             </div>
         </section>
 
-        <section className="learn-anything pt-lg-5">
+        <section className="learn-anything">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12 learn-content pl-lg-0">
-                        <h1 className="learn-title pb-3">Learn Anything Anywhere <br/> at Your Own Pace</h1>
+                        <h1 className="learn-title">Learn Anything Anywhere <br/> at Your Own Pace</h1>
                         <div className="learn-para">
                             <ul className="learn-para-list">
                                 <li className="learn-para-item">
                                     <p>Learn Valuable Skills From Mega Influencers</p>
                                 </li>
                                 <li className="learn-para-item">
-                                    <p>A platform where influencers come to create crossover className</p>
+                                    <p>A platform where influencers come to create crossover class</p>
                                 </li>
                                 <li className="learn-para-item">
                                     <p>Your purchases stay yours forever. No Monthly Fee - EVER!</p>
                                 </li>
                             </ul>
                         </div>
-                        <div className="learn-btn">
-                            <button className="btn btn-search btn-get">Get Started Today!</button>
+                        <div className="learn-btn mt-3">
+                            <button onMouseEnter={handleHover} onMouseLeave={handleLeave} className="btn btn-search btn-get"><span>Get Started Today!</span></button>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12 col-12 learn-video">
@@ -152,7 +224,7 @@ function Home(props) {
                     <h3>Explore All</h3>
                 </div>
                 <h2 className="discover-title">Discover Experts</h2>
-                <div className="discover-tab mt-4">
+                <div className="discover-tab mt-3">
                     <ul className="nav nav-tabs" role="tablist">
                         <li className="nav-item">
                             <a className="nav-link active ml-0" data-toggle="tab" href="#tabs-1" role="tab">Featured</a>
@@ -167,7 +239,7 @@ function Home(props) {
                             <a className="nav-link" data-toggle="tab" href="#tabs-4" role="tab">Just Added</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link btn-explore-hover" data-toggle="tab" role="tab">Explore All &nbsp; →</a>
+                            <a className="nav-link btn-explore-hover" onMouseEnter={handleHover} onMouseLeave={handleLeave} data-toggle="tab" role="tab"><span>Explore All &nbsp; →</span></a>
                         </li>
                     </ul>
                     <div className="tab-content mt-5">
@@ -209,8 +281,8 @@ function Home(props) {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="learn-btn">
-                                    <button className="btn btn-search btn-get">Get Started Today!</button>
+                                <div className="learn-btn mt-3">
+                                    <button onMouseEnter={handleHover} onMouseLeave={handleLeave} className="btn btn-search btn-get btn-get2"><span>Get Started Today!</span></button>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +290,7 @@ function Home(props) {
                 </div>
             </div>
         </section>
-        <div className='expert-border'>
+        <div className= {`expert-border ${hover ?'border-hide':''}`}>
         <section className="discover-export">
             <div className="container">
                 <div className="discover-title-mb">
@@ -241,7 +313,7 @@ function Home(props) {
                             <a className="nav-link" data-toggle="tab" href="#tabs-4" role="tab">Just Added</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link btn-explore-hover" data-toggle="tab" role="tab">Explore All &nbsp; →</a>
+                            <a className="nav-link btn-explore-hover" onMouseEnter={handleHover} onMouseLeave={handleLeave} data-toggle="tab" role="tab"><span>Explore All &nbsp; →</span></a>
                         </li>
                     </ul>
                     <div className="tab-content mt-5">
@@ -325,8 +397,8 @@ function Home(props) {
                                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium adipisci?
                                         Suscipit amet voluptatibus.</p>
                                 </div>
-                                <div className="learn-btn">
-                                    <button className="btn btn-search btn-get">Get Started Today!</button>
+                                <div className="learn-btn mt-2">
+                                    <button className="btn btn-search btn-get btn-get2" onMouseEnter={handleHover} onMouseLeave={handleLeave}><span>Get Started Today!</span></button>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +410,7 @@ function Home(props) {
         <section className="testimonial-slider">
             <div className="container">
                 <h2 className="member-title text-center">See What Our <br /> members are saying.</h2>
-                <div className="member-slider client-testimonial-carousel mt-4">
+                <div className="member-slider client-testimonial-carousel mt-5">
                     <div className="single-testimonial-item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Eveniet ex labore id beatae molestiae, libero quis eum nam voluptates quidem.</p>

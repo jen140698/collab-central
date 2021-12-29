@@ -31,7 +31,7 @@ function Footer(props) {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-4 col-sm-12 col-12">
+                        <div className="col-md-3 col-sm-12 col-12">
                             <div className="footer-right-content">
                                 <div className="footer-title">Connect</div>
                                 <ul className="nav-list">
@@ -45,13 +45,13 @@ function Footer(props) {
                     <div className="footer-bottom row">
                         <div className='col-md-4 col-sm-12 col-12'>
                             <div className="footer-logo">
-                                <a href="index.html"><img src={require("../images/Collabs-Central-Logo.png")} className="img-fluid lazyload" alt="Logo"
-                                    width="200px" /></a>
+                                <a href="index.html"><img src={require("../images/Collabs-Central-Logo.svg")} className="img-fluid lazyload" alt="Logo"
+                                    width="249px" /></a>
                             </div>
                         </div>
                         <div className='col-md-4 col-sm-12'></div>
-                        <div className='col-md-4 col-sm-12 col-12'>
-                            <div className="footer-year ml-md-3">
+                        <div className='col-md-3 col-sm-12 col-12'>
+                            <div className="footer-year ml-md-1">
                                 © 2022 Collabscentral
                             </div>
                         </div>
